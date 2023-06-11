@@ -1,0 +1,16 @@
+
+mysql:
+  image: mysql:latest
+  rootPassword: amdin@123
+  database: wiki-db
+  user: wiki-user
+  password: admin@123
+  storage:
+    size: 20Gi
+    storageClassName: local-storage
+
+wikimedia:
+  image: bikash725/mediawiki:latest
+  mysqlHost: mysql-service-name
+  mysqlPort: 3306
+
