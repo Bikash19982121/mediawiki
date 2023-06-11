@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wikimedia-deployment
+  labels:
+    app: wikimedia
+spec:
+  selector:
+    matchLabels:
+      app: wikimedia
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wikimedia
+        type: web
+    spec:
+      containers:
+        - name: wikimedia
+          image: {{ .Values.wikimedia.image }}
+          ports:
+            - containerPort: 80
+              name: httpd-port
