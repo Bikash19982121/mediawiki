@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ include "mychart.fullname" . }}-backend-volume-claim
+  name: mediawiki-volume-claim
 spec:
   storageClassName: {{ .Values.mysql.storage.storageClassName }}
   accessModes:
