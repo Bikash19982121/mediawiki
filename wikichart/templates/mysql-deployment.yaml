@@ -44,4 +44,4 @@ spec:
       volumes:
         - name: mysql-persistent-storage
           persistentVolumeClaim:
-            claimName: {{ include "mychart.fullname" . }}-backend-volume-claim
+            claimName: mediawiki-volume-claim
