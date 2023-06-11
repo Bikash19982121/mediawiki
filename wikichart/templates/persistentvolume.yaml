@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: {{ include "mychart.fullname" . }}-backend-volume
+  name: mediawiki-volume
   labels:
     type: local
 spec:
